@@ -17,19 +17,19 @@ function detect_os {
         detect_distro
     elif [[ "$OSTYPE" == "darwin"* ]];
     then
-        echo -e "Not yet supported"
+        echo -e "\e[31mNot yet supported\e[39m"
     elif [[ "$OSTYPE" == "cygwin" ]];
     then
-        echo -e "Not yet supported"
+        echo -e "\e[31mNot yet supported\e[39m"
     elif [[ "$OSTYPE" == "msys" ]];
     then
-        echo -e "Not yet supported"
+        echo -e "\e[31mNot yet supported\e[39m"
     elif [[ "$OSTYPE" == "win32" ]];
     then
-        echo -e "Definitely not supported"
+        echo -e "\e[31mDefinitely not supported\e[39m"
     elif [[ "$OSTYPE" == "freebsd"* ]];
     then
-        echo -e "You are using a BSD machine, script may or may not work. We haven't done testing"
+        echo -e "\e[33mYou are using a BSD machine, script may or may not work. We haven't done testing\e[39m"
     else
         exit 2;
     fi
