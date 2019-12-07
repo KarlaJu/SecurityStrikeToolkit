@@ -14,13 +14,13 @@ because it is inconvenient for someone with power) and to make easier to appeal
 to instances specialized in prosecuting human rights violations (let say local,
 country and international courts).
 
----
 
-**DISCLARIMER:** we are **not security experts** and this information must
+
+> **DISCLARIMER:** we are **not security experts** and this information must
 be taken just as areference to have what we hope is the minimal information
 about this subjects. If you think you could be in a risk bigger (may say a
 nation-state, crime organization is prosecuting your cause) **DO NOT** follow
 this information, appeal to more specialized instalnces for advices.
 
----
+
 
