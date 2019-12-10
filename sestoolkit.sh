@@ -10,6 +10,14 @@ do
     fi
 done
 
+# Architecture Detect
+arch=$(uname -m)
+
+if [[ arch != "x86_64" ]];
+then
+    echo -e "Your architecture is not AMD64, some functions may not work properly"
+fi
+
 # OS detection
 function detect_os {
     if [[ "$OSTYPE" == "linux-gnu" ]];
