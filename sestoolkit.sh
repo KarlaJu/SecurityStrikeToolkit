@@ -1,12 +1,14 @@
 #!/usr/bin/env sh
 
+DEBIAN_SH_PATH='distros/debian.sh'
+
 # Arguments handler
 for arg in "$@"
 do
     if [ "$arg" = "--help" ] || [ "$arg" = "-h" ]
     then
         echo -e "\e[32mSecurity Strike Toolkit Help\e[39m"
-        echo -e "Usage: "
+        echo -e "Usage:  sestoolkit.sh <FLAGS> <OPTIONS>"
     fi
 done
 
@@ -41,6 +43,7 @@ detect_distro() {
         echo -e "You are running Ubuntu"
     elif [ -n "$(gcc -version | grep Debian)" ]; then
         echo -e "You are running Debian"
+        "$DEBIAN_SH_PATH"
     elif [ -n "$(gcc -version | grep Manjaro)" ]; then
         echo -e "You are running Manjaro"
     fi
