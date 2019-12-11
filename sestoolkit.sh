@@ -10,19 +10,11 @@ do
     fi
 done
 
-# Architecture Detect
-arch=$(uname -m)
-
-if [[ $arch != "x86_64" ]];
-then
-    echo -e "Your architecture is not AMD64, some functions may not work properly"
-fi
-
 # OS detection
 detect_os() {
     if [[ "$OSTYPE" == "linux-gnu" ]];
     then
-        detect_distro
+        kernel_version
     elif [[ "$OSTYPE" == "darwin"* ]];
     then
         echo -e "\e[31mNot yet supported\e[39m"
@@ -61,4 +53,7 @@ kernel_version() {
     if [ $kernel -lt 30 ]; then
         echo -e "This script doesn't support any kernel version prior to 3.0.0"
     fi
+
+    echo -e "Kernel version is [OK], proceeding to detect distribution"
+    detect_distro
 }
