@@ -31,7 +31,7 @@ detect_os() {
         echo -e "\e[31mDefinitely not supported\e[39m"
     elif [[ "$OSTYPE" == "freebsd"* ]];
     then
-        echo -e "\e[33mYou are using a BSD machine, script may or may not work. We haven't done testing\e[39m"
+        echo -e "\e[33mNo plans for support[39m"
     else
         exit 2
     fi
