@@ -34,7 +34,7 @@ use() {
           MODULES:
 __EOF__
 
-    for i in "${OPATH}"/breeds/*; do
+    for i in "${OPATH}"/mods/*; do
         [ ! -L "$i" -a -f "$i" ] && echo "            ${i##*/}"
     done
 
@@ -44,5 +44,5 @@ __EOF__
 
 OPTIONS=$1; shift;
 
-[ ! -f "${OPATH}/breeds/${OPTIONS}" ] && use
-"${OPATH}"/breeds/"${OPTIONS}" "$@"
+[ ! -f "${OPATH}/mods/${OPTIONS}" ] && use
+"${OPATH}"/mods/"${OPTIONS}" "$@"
