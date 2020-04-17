@@ -38,7 +38,7 @@ __EOF__
         [ ! -L "$i" -a -f "$i" ] && echo "            ${i##*/}"
     done
 
-    [ "${OPTIONS}" == "help" ] && exit 0 || exit 1
+    [ "${OPTIONS}" = "help" ] && exit 0 || exit 1
 
 }
 
