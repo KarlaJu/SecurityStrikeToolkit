@@ -22,11 +22,4 @@ check_root() {
 		echo "This module must be run as root"; exit 1
 }
 
-is_multilib() {
-	if $(uname -m ) = "x86_64" ; then
-	echo "Multilib is not supported!"; exit 2
-	else
-	echo "[-] multilib is already enabled!"
-	fi
-}
 # 2020 - SecStrikeToolkit
