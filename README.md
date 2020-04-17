@@ -1,4 +1,6 @@
-# Security Strike Toolkit
+<div align="center">
+    <img width="200px" src="logo.png">
+</div>
 
 This security strike toolkit is an attemp to provide information about secure
 digital communication, data verification and protection in a friendly manner.
