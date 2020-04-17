@@ -1,0 +1,28 @@
+#! /bin/sh
+
+. ../lib/era.sh
+
+help() {
+    cat <<__EOF__
+
+    usage: sestoolkit.sh ssh [ secure | restore ]
+
+    secure: Hardens the ssh configuration of the macine.
+    restore: Returns ssh configuration to it's original values.
+
+__EOF__
+}
+
+secure() {
+}
+
+restore() {
+}
+
+case $1 in
+    help) help ;;
+
+
+    *) help;;
+esac
+# 2020 - SecStrikeToolkit
