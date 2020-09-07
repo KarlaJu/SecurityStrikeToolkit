@@ -5,18 +5,31 @@
 help() {
     cat <<__EOF__
 
-    usage: sestoolkit.sh ssh [ secure | restore ]
+    usage: sestoolkit.sh ssh [ disable | harden | restore ]
 
-    secure: Hardens the ssh configuration of the macine.
+    disable : Disables ssh login (recommended on laptops & desktop machines only)
+    harden: Hardens the ssh configuration of the macine.
     restore: Returns ssh configuration to it's original values.
 
 __EOF__
 }
 
+disable() {
+   
+}
+
 secure() {
+    check_root
+    echo "Creating a copy of the current sshd_config file"
+    cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak && chown root:root /etc/ssh/sshd_config.bak
+    sed 's/#PermitRootLogin prohibit-password/PermitRootLogin no/g' /etc/ssh/sshd_config
+    echo "Writing config files in standard ssh directory"
+    sleep 2
+
 }
 
 restore() {
+    echo has
 }
 
 case $1 in

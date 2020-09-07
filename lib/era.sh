@@ -19,7 +19,7 @@ fi
 
 check_root() {
 	[ "$(id -u)" -eq 0 ] && return "$TRUE" ||\
-		echo "This module must be run as root"; exit 1
+		echo "This module option must be run as root"; exit 1
 }
 
 # 2020 - SecStrikeToolkit
